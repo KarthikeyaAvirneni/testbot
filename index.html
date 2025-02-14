@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botpress Webchat</title>
+    <!-- Include Botpress Webchat Script -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <!-- Optional: Custom CSS for styling -->
+    <style>
+        /* Customize the chat widget */
+        .bp-webchat {
+            font-family: Arial, sans-serif;
+        }
+        .bp-webchat-header {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .bp-webchat-send-button {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>Interact with our bot below!</p>
+
+    <!-- Initialize Botpress Webchat -->
+    <script>
+        window.botpressWebChat.init({
+            botId: '57557051', // Replace with your bot's ID
+            hostUrl: 'https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/02/07/05/20250207050146-RDCNT4M1.json', // Replace with your bot's server URL
+            messagingUrl: 'https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/02/07/05/20250207050146-RDCNT4M1.json', // Same as hostUrl
+            clientId: 'a661ace2-dece-4c8b-952e-5fff24955761', // Optional: Replace with your client ID
+            webhookId: 'your-webhook-id', // Optional: Replace with your webhook ID
+            lazySocket: true, // Reduces initial load time
+            botName: 'My Bot', // Name of your bot
+            avatarUrl: 'https://example.com/path/to/avatar.png', // Bot avatar
+            stylesheet: 'https://example.com/path/to/custom-styles.css', // Optional: Link to custom CSS
+            enableConversationDeletion: true, // Allow users to delete conversations
+            showConversationsButton: true, // Show conversation history button
+            hideWidget: false, // Show the widget by default
+            disableAnimations: false, // Enable/disable animations
+            containerWidth: '400px', // Width of the chat container
+            layoutWidth: '300px', // Width of the chat layout
+            showPoweredBy: true, // Show "Powered by Botpress"
+            enableTranscriptDownload: true, // Allow users to download chat transcripts
+            enablePersistHistory: true, // Save chat history
+            closeOnEscape: true, // Close chat on pressing the Escape key
+            enableArrowNavigation: true, // Enable keyboard navigation
+            enableVoiceComposer: true, // Enable voice input
+        });
+    </script>
+</body>
+</html>
